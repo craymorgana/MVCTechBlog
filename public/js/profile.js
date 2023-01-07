@@ -14,7 +14,7 @@ const delButtonHandler = async (event) => {
 	}
 };
 
-document
-	.querySelector(".delete-blog")
-	.addEventListener("click", delButtonHandler);
+// document
+// 	.querySelector(".delete-blog")
+// 	.addEventListener("click", delButtonHandler);
 
