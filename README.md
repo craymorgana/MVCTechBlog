@@ -5,6 +5,8 @@
 
 This is a Tech Blog using a MVC layout. Users can create a login, view post, cr  and even create a post.
 
+![demo](./screenshot.png)
+
 ## Table of Contents
 
 - [MVC Tech Blog](#mvc-tech-blog)
