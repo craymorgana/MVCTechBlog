@@ -1,26 +1,26 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome {{name}}!</h2>
-  </div>
-</div>
+<!-- Loop over each object in the blog array -->
+{{#each blogs as |blog|}}
+	<div class="row mb-4 project">
+		<div class="col-md-5">
+			<h2>
+				<!-- Call helper function with triple brackets to render the emoji span as HTML -->
+				<a href="/blog/{{blog.id}}">{{blog.title}}</a>
+			</h2>
+			<p>
+				<p>{{blog.content}}</p>
+			</p>
+			<p>Created by
+				{{blog.user.name}}
+				on
+				{{format_date blog.date_created}}</p>
+		</div>
+		<div class="col-md-7">
+			<p>
+				{{project.description}}
+			</p>
+		</div>
+	</div>
+{{/each}}
 
-
-  {{#if blogs.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Blogs:</h3>
-
-    {{#each blogs as |blog|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4>{{blog.title}}</h4>
-      </div>
-      <div class="col-md-4">
-        <p>{{blog.content}}</p>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
 
 <script src="./js/profile.js"></script>
